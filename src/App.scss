@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    height: 15vh;
+    background-color: #000;
+    display: flex;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+
+    >img {
+        height: 100%;
+    }
+
+    >.navitems {
+        width: 100%;
+        margin-left: 50px;
+
+        >a {
+            margin-left: 2rem;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+    }
+
+    >svg {
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}
+
+.home {
+    >.banner {
+        height: 60vh;
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 2rem;
+        box-sizing: border-box;
+        flex-direction: column;
+
+        &::after {
+            content: "";
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: #000;
+            opacity: 0.4;
+            top: 0%;
+            left: 0%;
+        }
+
+        >.container {
+            z-index: 10;
+            position: absolute;
+            bottom: 10px;
+
+            >h2,
+            p {
+                width: 40%;
+                padding: 1rem;
+            }
+
+            >div {
+                display: flex;
+                align-items: center;
+
+                >button {
+                    background-color: #fff;
+                    color: #000;
+                    padding: 1rem 2rem;
+                    display: flex;
+                    // width: 150px;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    outline: none;
+                    border: none;
+                    border-radius: 10px;
+                    margin: 1rem;
+
+                    >svg {
+                        color: #000;
+                        font-size: 1.7rem;
+                        margin: 0 10px;
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    .row {
+        padding: 1.5rem;
+        background-color: #000;
+
+        >h2 {
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        >div {
+            // margin: 2rem 0  ;
+            display: flex;
+            overflow-x: auto;
+            background-color: #000;
+            gap: 1rem;
+        }
+    }
+
+    .card {
+        >img{
+
+            width: 200px;display: flex;
+            background-color: #000;
+            cursor: pointer;
+            transition: transsform 0.5s;
+        }
+        >h3{
+            display: none;
+        }
+
+        &:hover {
+            transform: translateY(-10px) scale(1.1);
+        }
+    }
+}
